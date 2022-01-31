@@ -1,0 +1,55 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": false,
+        "jsx": "react-jsx",
+        "jsxImportSource": "@emotion/react",
+        "baseUrl": ".",
+        "paths": {
+            "models/*": [
+                "src/models/*"
+            ],
+            "containers/*": [
+                "src/containers/*"
+            ],
+            "components/*": [
+                "src/components/*"
+            ],
+            "pages/*": [
+                "src/pages/*"
+            ],
+            "theme/*": [
+                "src/theme/*"
+            ],
+            "types/*": [
+                "src/types/*"
+            ],
+            "fragments/*": [
+                "src/fragments/*"
+            ],
+            "assets/*": [
+                "src/assets/*"
+            ]
+        }
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": ["node_modules"]
+}
