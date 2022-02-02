@@ -21,6 +21,7 @@
         "jsx": "react-jsx",
         "jsxImportSource": "@emotion/react",
         "baseUrl": ".",
+        "rootDirs": ["src"],
         "paths": {
             "models/*": [
                 "src/models/*"
@@ -46,10 +47,22 @@
             "assets/*": [
                 "src/assets/*"
             ]
-        }
+        },
+        "typeRoots": [
+            "./src/types",
+            "./node_modules/@types"
+        ],
+        "types": [
+            "jest",
+            "node"
+        ]
     },
     "include": [
-        "./src/**/*"
+        "./src/**/*",
+        "jest-setup.ts"
     ],
-    "exclude": ["node_modules"]
+    "exclude": [
+        "node_modules",
+        "./src/**/*.spec.ts",
+    ]
 }

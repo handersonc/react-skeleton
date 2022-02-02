@@ -24,7 +24,8 @@ const MODULE_RESOLVE = {
       schema: toModulePath('schema'),
       styles: toModulePath('styles'),
       theme: toModulePath('theme'),
-      utils: toModulePath('utils')
+      utils: toModulePath('utils'),
+      tests: toModulePath('tests')
     }
   }
 
@@ -32,7 +33,7 @@ module.exports = {
     entry: './src/index.tsx',
     resolve: {
         ...MODULE_RESOLVE,
-        extensions: [".ts", ".tsx", ".js", ".json"],
+        extensions: [".ts", ".tsx", ".js", ".json", ".cjs"],
     },
     module: {
         rules: [
@@ -51,10 +52,8 @@ module.exports = {
                 use: ["style-loader", "css-loader"],
             },
             {
-                test: /\.(png|svg|jpg|gif)$/,
-                use: [
-                    'file-loader'
-                ]
+                test: /\.(png|svg|jpg|jpeg|gif)$/,
+                type: 'asset/resource'
             }
         ]
     },

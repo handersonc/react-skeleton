@@ -1,9 +1,9 @@
-import { hot } from 'react-hot-loader'
+import { hot } from "react-hot-loader"
 
 // React Imports
 import { ThemeProvider } from "@emotion/react"
 
-import Navigator from 'containers/Navigator'
+import Navigator from "containers/Navigator"
 import { theme } from "theme/index"
 
 

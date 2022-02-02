@@ -1,5 +1,4 @@
-import createMuiTheme, { Color, Palette, Theme, ThemeOptions } from "@mui/material"
-import { CommonColors, PaletteColor } from "@mui/material/styles/createPalette";
+import { Palette, Theme, ThemeOptions } from "@mui/material"
 
 interface ICommonColors {
     blue: string,
@@ -10,10 +9,8 @@ interface ICommonColors {
 }
 
 export interface IPalette extends Palette {
-  toolbar?: {}
-  tabs?: {
-
-  }
+  toolbar?: any
+  tabs?: any
   common: ICommonColors
 }
 

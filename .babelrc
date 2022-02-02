@@ -1,9 +1,16 @@
 {
     "presets": [
-        "@babel/env",
-        "@babel/react",
-        "@babel/typescript",
-        "@emotion/babel-preset-css-prop"
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "node": "current"
+                }
+            }
+        ],
+        "@emotion/babel-preset-css-prop",
+        "@babel/preset-react",
+        "@babel/preset-typescript"
     ],
     "plugins": [
         "@babel/plugin-proposal-class-properties",

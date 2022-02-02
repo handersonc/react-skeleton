@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 // react imports
 import * as React from "react"
 import { css } from "@emotion/react"
@@ -117,6 +116,7 @@ const Header = () => {
         position="static"
         color="primary"
         style={{ background: "primary", boxShadow: "none" }}
+        data-testid="header"
       >
         <Toolbar>
           <IconButton
