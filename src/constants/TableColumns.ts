@@ -1,4 +1,6 @@
-export const TABLE_COLUMNS = [
+import { TableColumn } from "components/tasks-datatable/Types";
+
+export const TABLE_COLUMNS: Array<TableColumn> = [
   {
     field: "jobNumber",
     headerName: "Job Number",

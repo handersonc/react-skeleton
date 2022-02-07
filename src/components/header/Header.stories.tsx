@@ -7,7 +7,7 @@ import Header from "./Header"
 
 export default {
   title: "Header",
-  component: Header,
+  component: Header
 } as ComponentMeta<typeof Header>
 
 const HeaderTemplate: ComponentStory<typeof Header> = (args) => <Header />

@@ -7,14 +7,9 @@ import SearchIcon from "@mui/icons-material/Search"
 // MUI Imports
 import { alpha, TextField } from "@mui/material"
 import { DataGrid, GridRowsProp, GridColDef } from "@mui/x-data-grid";
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router";
 
 // Custom Imports
 import { theme } from "../../theme"
-import { TABLE_COLUMNS } from "../../constants/TableColumns"
-
-import { Task } from "models/Task.interface";
 import { TaskDataTableProps } from "./Types"
 
 
@@ -41,31 +36,7 @@ const rows: GridRowsProp = [
   { id: 3, col1: "MUI", col2: "is Amazing" },
 ]
 
-const TasksDataTable = ({data}: TaskDataTableProps ) => {
-  const [columns, setColumns] = useState<any>([])
-  const [count, setCount] = useState(0)
-
-  const location = useLocation()
-
-  useEffect(() => {
-    const tableType = location.pathname === "/team" ? "team" : "personal"
-    const cols = [...TABLE_COLUMNS]
-
-    const assignedTo = {
-      field: "assignedTo",
-      headerName: "Assigned To",
-      width: 200,
-      editable: false,
-    }
-
-    if (tableType === "personal") {
-      setColumns([...cols])
-    } else {
-     
-      setColumns([...cols, assignedTo])
-    }
-  }, [location])
-
+const TasksDataTable = ({data, columns}: TaskDataTableProps ) => {
 
   return (
     <div style={{ height: 400, width: "100%" }}>
@@ -81,10 +52,9 @@ const TasksDataTable = ({data}: TaskDataTableProps ) => {
           placeholder="Search"
         />
         <div style={{ height: 300, width: "100%" }}>
-          <DataGrid rows={rows} columns={columns} />
+          <DataGrid rows={data} columns={columns} />
         </div>
       </DataTableWrapper>
-
     </div>
   )
 }

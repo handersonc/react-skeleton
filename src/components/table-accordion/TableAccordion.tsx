@@ -29,7 +29,7 @@ const StyledAccordionSummary = styled(AccordionSummary )(props => ({
   backgroundColor: props.color
 }))
 
-const TableAccordion = ({ title, summaryColor }: TableAccordionProps) => {
+const TableAccordion = ({ title, summaryColor, columns, data }: TableAccordionProps) => {
   return (
     <Accordion defaultExpanded={true}>
       <StyledAccordionSummary
@@ -41,7 +41,7 @@ const TableAccordion = ({ title, summaryColor }: TableAccordionProps) => {
         <StyledTypography>{title}</StyledTypography>
       </StyledAccordionSummary>
       <StyledAccordionDetails>
-        <TasksDataTable data={[]} />
+        <TasksDataTable data={data} columns={columns} />
       </StyledAccordionDetails>
     </Accordion>
   )

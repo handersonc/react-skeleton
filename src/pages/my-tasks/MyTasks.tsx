@@ -1,40 +1,35 @@
 // React Imports
-import { useContext, useEffect, useState } from "react"
 
 // Custom Imports
-import TableAccordion from "components/table-accordion/TableAccordion"
-import { TableAccordionProps } from "components/table-accordion/Types"
+import { TABLE_COLUMNS } from 'constants/TableColumns'
+import { GLOBAL_TASKS_LIST } from 'constants/TaskMockData'
 
-const accordionItems: Array<TableAccordionProps> = [
-  {
-    title: "Urgent Tasks",
-    summaryColor: "#E35C5C",
-  },
-  {
-    title: "Active Tasks",
-    summaryColor: "#63B0F3",
-  },
-  {
-    title: "Snoozed Tasks",
-    summaryColor: "#FBD250",
-  },
-]
+import TableAccordion from 'components/table-accordion/TableAccordion'
+
 
 const MyTasksPage = () => {
+
+  const columns = TABLE_COLUMNS
 
   return (
     <div>
       <TableAccordion
-        title={accordionItems[0].title}
-        summaryColor={accordionItems[0].summaryColor}
+        title={'Urgent Tasks'}
+        summaryColor={'#E35C5C'}
+        columns={columns}
+        data={GLOBAL_TASKS_LIST}
       />
       <TableAccordion
-        title={accordionItems[1].title} 
-        summaryColor={accordionItems[1].summaryColor}
+        title={'Active Tasks'} 
+        summaryColor={'#63B0F3'}
+        columns={columns}
+        data={GLOBAL_TASKS_LIST}
       />
       <TableAccordion
-        title={accordionItems[2].title}
-        summaryColor={accordionItems[2].summaryColor}
+        title={'Snoozed Tasks'}
+        summaryColor={'#FBD250'}
+        columns={columns}
+        data={GLOBAL_TASKS_LIST}
       />
     </div>
   )
