@@ -1,6 +1,6 @@
 import { Task } from "models/Task.interface"
 
-export const GLOBAL_TASKS_LIST: Array<Task> = [
+export const GLOBAL_TASKS_LIST: Array<Partial<Task>> = [
   {
     id: 11,
     jobNumber: 9993939,
@@ -47,7 +47,7 @@ export const GLOBAL_TASKS_LIST: Array<Task> = [
     processName: "Produce MPEG 2",
     name: "Stich MPEG normal Task",
     dueDate: "10/21/2021",
-    status: "new",
+    status: "assigned",
     priority: "normal",
     earliestVideoOrderDays: 5,
     earliestVideoOrderDueDate: "11/5/2021",
@@ -169,7 +169,7 @@ export const GLOBAL_TASKS_LIST: Array<Task> = [
     processName: "Produce MPEG",
     name: "Stich MPEG",
     dueDate: "10/21/2021",
-    status: "new",
+    status: "assigned",
     priority: "high",
     earliestVideoOrderDays: 10,
     earliestVideoOrderDueDate: "10/18/2021",

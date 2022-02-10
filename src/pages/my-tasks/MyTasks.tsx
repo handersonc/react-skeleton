@@ -9,26 +9,24 @@ import TableAccordion from 'components/table-accordion/TableAccordion'
 
 const MyTasksPage = () => {
 
-  const columns = TABLE_COLUMNS
-
   return (
     <div>
       <TableAccordion
         title={'Urgent Tasks'}
         summaryColor={'#E35C5C'}
-        columns={columns}
+        columns={TABLE_COLUMNS}
         data={GLOBAL_TASKS_LIST}
       />
       <TableAccordion
         title={'Active Tasks'} 
         summaryColor={'#63B0F3'}
-        columns={columns}
+        columns={TABLE_COLUMNS}
         data={GLOBAL_TASKS_LIST}
       />
       <TableAccordion
         title={'Snoozed Tasks'}
         summaryColor={'#FBD250'}
-        columns={columns}
+        columns={TABLE_COLUMNS}
         data={GLOBAL_TASKS_LIST}
       />
     </div>

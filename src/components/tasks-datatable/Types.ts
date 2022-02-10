@@ -7,6 +7,7 @@ export interface TableColumn {
   editable?: false,
 }
 export interface TaskDataTableProps {
-  data: Array<Task>
+  data: Array<Partial<Task>>
   columns: Array<TableColumn>
+  readOnly?: boolean
 }
