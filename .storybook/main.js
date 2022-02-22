@@ -2,11 +2,10 @@ const custom = require('../webpack.common.js');
 const { merge } = require("webpack-merge")
 
 module.exports = {
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(ts|tsx)'],
   addons: [
     '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    'storybook-addon-material-ui5'
+    '@storybook/addon-essentials'
   ],
   webpackFinal: async config => {
     return merge(config, {

@@ -1,7 +1,5 @@
 
 //.storybook/preview.js
-import { muiTheme } from 'storybook-addon-material-ui5'
-import { theme } from '../src/themes'
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -16,7 +14,3 @@ export const parameters = {
     inlineStories: false,
   },
 }
-
-export const decorators = [
-	muiTheme([theme]),
-]

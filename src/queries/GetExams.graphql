@@ -1,0 +1,7 @@
+#import "fragments/Quiz.graphql"
+
+query getExams {
+    exams {
+        ...ExamsFragment
+    }
+}

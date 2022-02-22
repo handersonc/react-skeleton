@@ -1,7 +1,0 @@
-#import "fragments/Quiz.graphql"
-
-query getQuizes {
-    quizes {
-        ...QuizFragment
-    }
-}

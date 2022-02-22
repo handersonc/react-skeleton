@@ -1,5 +1,7 @@
 // React Imports
 
+import ExamCard from "components/exam-card/ExamCard"
+
 // Custom Imports
 
 
@@ -7,7 +9,7 @@ const TakeAssesment = () => {
 
   return (
     <div>
-      Take assesment
+      <ExamCard />
     </div>
   )
 }
