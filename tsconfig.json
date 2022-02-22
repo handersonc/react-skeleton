@@ -23,36 +23,42 @@
         "baseUrl": ".",
         "rootDirs": ["src"],
         "paths": {
-            "models/*": [
-                "src/models/*"
-            ],
             "containers/*": [
                 "src/containers/*"
             ],
             "components/*": [
                 "src/components/*"
             ],
-            "constants/*": [
-                "src/constants/*"
-            ],
             "pages/*": [
                 "src/pages/*"
             ],
-            "theme/*": [
-                "src/theme/*"
+
+            "utils/*": [
+                "src/utils/*"
+            ],
+            "models/*": [
+                "src/models/*"
             ],
             "types/*": [
                 "src/types/*"
             ],
-            "fragments/*": [
-                "src/fragments/*"
+            
+            "themes/*": [
+                "src/themes/*"
             ],
             "assets/*": [
                 "src/assets/*"
             ],
-            "utils/*": [
-                "src/utils/*"
-            ]
+
+            "fragments/*": [
+                "src/fragments/*"
+            ],
+            "mutations/*": [
+                "src/mutations/*"
+            ],
+            "queries/*": [
+                "src/queries/*"
+            ]       
         },
         "typeRoots": [
             "./src/types",

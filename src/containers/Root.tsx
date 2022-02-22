@@ -4,7 +4,7 @@ import { hot } from "react-hot-loader"
 import { ThemeProvider } from "@emotion/react"
 
 import Navigator from "containers/Navigator"
-import { theme } from "theme/index"
+import { theme } from "themes/index"
 
 
 const RootContainer = () => {

@@ -17,8 +17,9 @@ import AccountCircle from "@mui/icons-material/AccountCircle"
 import PlayCircleFilledWhiteIcon from "@mui/icons-material/PlayCircleFilledWhite"
 
 // custom
-import logo from "assets/img/logo-white.png"
-import { theme } from "../../theme"
+import logo from "assets/img/logo.png"
+import { theme } from "themes/index"
+
 
 const FlexGlow = css({
   flexGrow: 1,

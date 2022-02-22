@@ -13,9 +13,8 @@ import Divider from "@mui/material/Divider"
 
 // Custom Imports
 import Header from "components/header/Header"
-import TaskToolbar from "components/task-toolbar/TaskToolbar"
 
-import MyTasks from "pages/my-tasks/MyTasks"
+import TakeAssesment from "pages/take-assesment/TakeAssesment"
 
 
 const Navigation = () => {
@@ -23,11 +22,10 @@ const Navigation = () => {
     <Router>
       <Header />
       <Divider />
-      <TaskToolbar />
       <Divider />
       <Routes>
         <Route path="/">
-          <Route index element={<MyTasks />}></Route>
+          <Route index element={<TakeAssesment />}></Route>
         </Route>
       </Routes>
     </Router>

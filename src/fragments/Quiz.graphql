@@ -1,0 +1,4 @@
+fragment QuizFragment on Quiz {
+    id
+    title
+}

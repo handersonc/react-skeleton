@@ -6,26 +6,26 @@ const path = require("path")
 const toModulePath = (...parts) => path.resolve(__dirname, 'src', ...parts)
 
 const MODULE_RESOLVE = {
-    alias: {
-      assets: toModulePath('assets'),
+    alias: {   
       components: toModulePath('components'),
-      models: toModulePath('models'),
       containers: toModulePath('containers'),
       context: toModulePath('context'),
-      constants: toModulePath('constants'),
-      fragments: toModulePath('fragments'),
-      hooks: toModulePath('hooks'),
-      images: toModulePath('images'),
-      mutations: toModulePath('mutations'),
       pages: toModulePath('pages'),
-      queries: toModulePath('queries'),
-      'react-dom': '@hot-loader/react-dom',
-      resolvers: toModulePath('resolvers'),
-      schema: toModulePath('schema'),
-      styles: toModulePath('styles'),
-      theme: toModulePath('theme'),
+
+      hooks: toModulePath('hooks'),
+      models: toModulePath('models'),
       utils: toModulePath('utils'),
-      tests: toModulePath('tests')
+      constants: toModulePath('constants'),
+
+      queries: toModulePath('queries'),
+      fragments: toModulePath('fragments'),
+      mutations: toModulePath('mutations'),
+      
+      assets: toModulePath('assets'),
+      themes: toModulePath('themes'),
+
+      tests: toModulePath('tests'),
+      'react-dom': '@hot-loader/react-dom',
     }
   }
 
@@ -33,7 +33,7 @@ module.exports = {
     entry: './src/index.tsx',
     resolve: {
         ...MODULE_RESOLVE,
-        extensions: [".ts", ".tsx", ".js", ".json", ".cjs"],
+        extensions: [".ts", ".tsx", ".js",".json", ".cjs"],
     },
     module: {
         rules: [
@@ -54,7 +54,16 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/,
                 type: 'asset/resource'
-            }
+            },
+            {
+                test: /\.(graphql|gql)$/i,
+                exclude: /node_modules/,
+                resolve: {
+                  ...MODULE_RESOLVE,
+                  extensions: ['.gql', '.graphql']
+                },
+                use: ['graphql-tag/loader']
+              }
         ]
     },
     output: {

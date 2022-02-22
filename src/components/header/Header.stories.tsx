@@ -10,7 +10,7 @@ export default {
   component: Header
 } as ComponentMeta<typeof Header>
 
-const HeaderTemplate: ComponentStory<typeof Header> = (args) => <Header />
+const HeaderTemplate: ComponentStory<typeof Header> = () => <Header />
 
 export const LoggedIn = HeaderTemplate.bind({});
 
