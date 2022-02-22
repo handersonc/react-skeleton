@@ -2,7 +2,7 @@
 
 const Header = () => {
   return (
-    <div>
+    <div data-testid="header">
       Header
     </div>
   )
