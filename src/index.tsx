@@ -1,5 +1,5 @@
 
-import 'assets/styles/sumadi.css'
+import 'assets/styles/styles.css'
 
 import ReactDOM from 'react-dom'
 import RootContainer from './containers/Root'
