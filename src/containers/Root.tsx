@@ -1,5 +1,3 @@
-import { hot } from "react-hot-loader"
-
 // React Imports
 import { ThemeProvider } from "@emotion/react"
 
@@ -13,4 +11,4 @@ const RootContainer = () => {
       <Navigator />
     </ThemeProvider>)
 }
-export default hot(module)(RootContainer)
+export default (RootContainer)

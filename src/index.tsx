@@ -1,8 +1,9 @@
+import { createRoot } from 'react-dom/client';
 
 import 'assets/styles/styles.css'
 
-import ReactDOM from 'react-dom'
 import RootContainer from './containers/Root'
 
-
-ReactDOM.render(<RootContainer />, document.getElementById('root'))
+const container = document.getElementById('root');
+const root = createRoot(container!);
+root.render(<RootContainer />)

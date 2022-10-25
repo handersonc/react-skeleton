@@ -25,7 +25,6 @@ const MODULE_RESOLVE = {
         themes: toModulePath('themes'),
 
         tests: toModulePath('tests'),
-        'react-dom': '@hot-loader/react-dom',
     }
 }
 
